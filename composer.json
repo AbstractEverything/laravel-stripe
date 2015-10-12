@@ -1,0 +1,21 @@
+{
+    "name": "abstracteverything/laravel-stripe",
+    "description": "Laravel service provider for Stripe",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rupert Franks",
+            "email": "ru.franks@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AbstractEverything\\LaravelStripe\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "5.1.*",
+        "stripe/stripe-php": "3.*"
+    }
+}
