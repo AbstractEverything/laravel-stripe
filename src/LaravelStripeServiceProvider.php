@@ -16,12 +16,11 @@ class LaravelStripeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if (config('stripe.live') == true)
+        if (config('stripe.live') === true)
         {
             Stripe::setApiKey(config('stripe.secret_key'));
         }
-        
-        if (config('stripe.live') == false)
+        else
         {
             Stripe::setApiKey(config('stripe.test_secret_key'));
         }
