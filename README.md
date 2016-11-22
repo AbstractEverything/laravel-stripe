@@ -1,10 +1,17 @@
 # Laravel Stripe
 
-This is a simple service provider to make setting up stripe easy. The provided config file makes it easy to switch between live and test mode.
+A Laravel service provider for [https://github.com/stripe/stripe-php](stripe/stripe-php).
+
+Set [https://dashboard.stripe.com/account/apikeys](Stripe API keys) in your .env file:
+
+STRIPE_SECRET_KEY
+TEST_STRIPE_SECRET_KEY
+STRIPE_PUBLISHABLE_KEY
+TEST_STRIPE_PUBLISHABLE_KEY
 
 ## Install
 
-Make sure you you have the [https://github.com/stripe/stripe-php](stripe-php) package installed then run `composer require abstracteverything/laravel-stripe` or add:
+Run `composer require abstracteverything/laravel-stripe` or add:
 
     {
         "require": {
@@ -13,5 +20,7 @@ Make sure you you have the [https://github.com/stripe/stripe-php](stripe-php) pa
     }
 
 to your `composer.json` file and run `composer update`.
+
+Add `AbstractEverything\LaravelStripe\LaravelStripeServiceProvider::class` to your providers array.
 
 Export the included config file using `php artisan vendor:publish`.
