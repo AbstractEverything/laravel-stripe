@@ -35,7 +35,7 @@ class LaravelStripeServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/config/stripe.php' => config_path().'/stripe.php',
+                __DIR__.'/config/stripe.php' => config_path('stripe.php'),
             ], 'stripe');
         }
     }
