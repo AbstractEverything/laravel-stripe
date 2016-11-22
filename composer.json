@@ -4,7 +4,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Rupert Franks",
+            "name": "R Franks",
             "email": "ru.franks@gmail.com"
         }
     ],
@@ -15,7 +15,7 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "illuminate/support": "5.1.*",
-        "stripe/stripe-php": "3.*"
+        "illuminate/support": "~5.1",
+        "stripe/stripe-php": "~4.0"
     }
 }
