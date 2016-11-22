@@ -33,18 +33,10 @@ class LaravelStripeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishAssets();
-    }
-
-    /**
-     * Publish configuration file.
-     *
-     * @return void
-     */
-    protected function publishAssets()
-    {
-        $this->publishes([
-            __DIR__.'/config/stripe.php' => config_path('stripe.php')
-        ], 'config');
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/config/stripe.php' => config_path().'/stripe.php',
+            ], 'stripe');
+        }
     }
 }
